@@ -1,0 +1,129 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPhJCW4rMa+raWEF8Mhyllc",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/andreeesz17/hola-mundo/blob/main/GG_COLAB\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WhpDruWqBCa3",
+        "outputId": "900436be-7b03-4919-ed08-0597752081e7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "------------------------------------------------------\n",
+            "   Bienvenido al Juego enfrentamiento de dados 🎲! \n",
+            "------------------------------------------------------\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "print(\"------------------------------------------------------\")\n",
+        "print(\"   Bienvenido al Juego enfrentamiento de dados 🎲! \")\n",
+        "print(\"------------------------------------------------------\")\n",
+        "\n",
+        "J1 = input(\"Ingrese el nombre del PRIMER JUGADOR: \")\n",
+        "J2 = input(\"Ingrese el nombre del SEGUNDO JUGADOR: \")\n",
+        "input(f\"{J1}, presiona Enter para lanzar el dado.\")\n",
+        "lanzamientoJ1 = random.randint(1, 6)\n",
+        "print(f\"{J1} sacaste {lanzamientoJ1}\")\n",
+        "input(f\"{J2}, presiona Enter para lanzar el dado.\")\n",
+        "lanzamientoJ2 = random.randint(1, 6)\n",
+        "print(f\"{J2} sacaste {lanzamientoJ2}\")\n",
+        "if lanzamientoJ1 > lanzamientoJ2:\n",
+        "    print(f\"El ganador es {J1}\")\n",
+        "elif lanzamientoJ2 > lanzamientoJ1:\n",
+        "    print(f\"El ganador es {J1}\")\n",
+        "else:\n",
+        "    print(f\"{J1} y {J2} empataron\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "print(\"Jugaras piedra, papel o tijera contra la compu\")\n",
+        "print(\"Para sacar PIEDRA digita 1\")\n",
+        "print(\"Para sacar PAPEL digita 2\")\n",
+        "print(\"Para sacar TIJERA digita 3\")\n",
+        "\n",
+        "eleccionMia = int(input(\"Escoge una opción: \"))\n",
+        "\n",
+        "if eleccionMia == 1:\n",
+        "    print(\"ELEGISTE PIEDRA\")\n",
+        "elif eleccionMia == 2:\n",
+        "    print(\"ELEGISTE PAPEL\")\n",
+        "elif eleccionMia == 3:\n",
+        "    print(\"ELEGISTE TIJERA\")\n",
+        "else:\n",
+        "    print(\"DEBE ELEGIR UN NÚMERO ENTRE 1 Y 3\")\n",
+        "    exit()\n",
+        "\n",
+        "eleccionCompu = random.randint(1, 3)\n",
+        "if eleccionCompu == 1:\n",
+        "    print(\"LA COMPU ELIGIÓ PIEDRA\")\n",
+        "elif eleccionCompu == 2:\n",
+        "    print(\"LA COMPU ELIGIÓ PAPEL\")\n",
+        "elif eleccionCompu == 3:\n",
+        "    print(\"LA COMPU ELIGIÓ TIJERA\")\n",
+        "\n",
+        "\n",
+        "if eleccionMia == 1 and eleccionCompu == 1:\n",
+        "    print(\"NADIE GANA\")\n",
+        "elif eleccionMia == 1 and eleccionCompu == 2:\n",
+        "    print(\"GANÓ LA COMPU XD\")\n",
+        "elif eleccionMia == 1 and eleccionCompu == 3:\n",
+        "    print(\"FELICIDADES LE GANASTE A LA COMPU\")\n",
+        "elif eleccionMia == 2 and eleccionCompu == 1:\n",
+        "    print(\"FELICIDADES LE GANASTE A LA COMPU\")\n",
+        "elif eleccionMia == 2 and eleccionCompu == 2:\n",
+        "    print(\"NADIE GANA\")\n",
+        "elif eleccionMia == 2 and eleccionCompu == 3:\n",
+        "    print(\"GANÓ LA COMPU XD\")\n",
+        "elif eleccionMia == 3 and eleccionCompu == 1:\n",
+        "    print(\"GANÓ LA COMPU XD\")\n",
+        "elif eleccionMia == 3 and eleccionCompu == 2:\n",
+        "    print(\"FELICIDADES LE GANASTE A LA COMPU\")\n",
+        "elif eleccionMia == 3 and eleccionCompu == 3:\n",
+        "    print(\"NADIE GANA\")"
+      ],
+      "metadata": {
+        "id": "YGOhvd0dFFFv"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
